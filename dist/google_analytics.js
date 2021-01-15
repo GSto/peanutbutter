@@ -6,9 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.trackPageview = trackPageview;
 exports.trackEvent = trackEvent;
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-function trackPageview(url) {
-  var trackingId = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : process.env.GA_TRACKING_ID;
-
+function trackPageview(url, trackingId) {
   if (!window.gtag) return;
   window.gtag("config", trackingId, {
     page_path: url

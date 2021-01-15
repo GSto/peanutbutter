@@ -1,5 +1,5 @@
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export function trackPageview(url, trackingId = process.env.GA_TRACKING_ID) {
+export function trackPageview(url, trackingId) {
   if (!window.gtag) return
   window.gtag("config", trackingId, {
     page_path: url,

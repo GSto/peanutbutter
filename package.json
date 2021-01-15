@@ -10,7 +10,6 @@
     "test": "jest",
     "prebuild": "rimraf dist",
     "build" : "babel --copy-files --out-dir dist --ignore *.test.js src"
-
   },
   "repository": {
     "type": "git",
