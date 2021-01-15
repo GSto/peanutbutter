@@ -26,6 +26,10 @@
     "url": "https://github.com/GSto/peanutbutter/issues"
   },
   "homepage": "https://github.com/GSto/peanutbutter#readme",
+  "dependencies": {
+    "highlight.js": "^10.3.2",
+    "markdown-it": "^12.0.2"
+  },
   "devDependencies": {
     "@testing-library/dom": "^7.26.6",
     "@testing-library/jest-dom": "^5.11.6",
