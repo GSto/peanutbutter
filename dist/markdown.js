@@ -1,25 +1,22 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.renderMarkdown = renderMarkdown;
+exports["default"] = void 0;
 
-var _highlight2 = require('highlight.js');
+var _highlight2 = _interopRequireDefault(require("highlight.js"));
 
-var _highlight3 = _interopRequireDefault(_highlight2);
+var _markdownIt = _interopRequireDefault(require("markdown-it"));
 
-var _markdownIt = require('markdown-it');
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var _markdownIt2 = _interopRequireDefault(_markdownIt);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var md = new _markdownIt2.default({
+var md = new _markdownIt["default"]({
   highlight: function highlight(str, lang) {
-    if (lang && _highlight3.default.getLanguage(lang)) {
+    if (lang && _highlight2["default"].getLanguage(lang)) {
       try {
-        return '<pre class="hljs"><code>' + _highlight3.default.highlight(lang, str, true).value + '</code></pre>';
+        return '<pre class="hljs"><code>' + _highlight2["default"].highlight(lang, str, true).value + '</code></pre>';
       } catch (__) {}
     }
 
@@ -31,6 +28,7 @@ function renderMarkdown(content) {
   return md.render(content);
 }
 
-exports.default = {
+var _default = {
   render: renderMarkdown
 };
+exports["default"] = _default;

@@ -1,20 +1,21 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports["default"] = void 0;
 
-var _google_analytics = require('./google_analytics');
+var _google_analytics = _interopRequireDefault(require("./google_analytics"));
 
-var _google_analytics2 = _interopRequireDefault(_google_analytics);
+var _markdown = _interopRequireDefault(require("./markdown"));
 
-var _markdown = require('./markdown');
+var _transformers = _interopRequireDefault(require("./transformers"));
 
-var _markdown2 = _interopRequireDefault(_markdown);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-  analytics: _google_analytics2.default,
-  markdown: _markdown2.default
+var _default = {
+  analytics: _google_analytics["default"],
+  markdown: _markdown["default"],
+  transformers: _transformers["default"]
 };
+exports["default"] = _default;

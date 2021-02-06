@@ -1,17 +1,23 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var slugify = exports.slugify = function slugify(post) {
+exports["default"] = exports.slugToFile = exports.slugify = void 0;
+
+var slugify = function slugify(post) {
   return post.replace('.md', '').replace(/\s+|_/g, '-');
 };
 
-var slugToFile = exports.slugToFile = function slugToFile(slug) {
-  return slug.replace(/\s+|-/g, '_') + '.md';
+exports.slugify = slugify;
+
+var slugToFile = function slugToFile(slug) {
+  return "".concat(slug.replace(/\s+|-/g, '_'), ".md");
 };
 
-exports.default = {
+exports.slugToFile = slugToFile;
+var _default = {
   slugify: slugify,
   slugToFile: slugToFile
 };
+exports["default"] = _default;
