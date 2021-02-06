@@ -1,6 +1,7 @@
 import transformers from './transformers'
 const { slugify, slugToFile } = transformers
 
+
 describe('slugify', () => {
   test('removes the .md file extension', () => {
     const post = 'title.md'
